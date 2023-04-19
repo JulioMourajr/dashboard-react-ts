@@ -53,7 +53,7 @@ const CadastrarInformacoes:React.FC = ()=>{
             type="text" 
             id="foto"
             name="foto" 
-            className={`${styles.input} ${touched.foto && errors.foto && styles.errorMessage}`}
+            className={`${styles.input} ${touched.foto && errors.foto && styles.error}`}
              />
              <ErrorMessage name="foto" component="div" className={styles.errorMessage}/>
           </fieldset>
@@ -63,7 +63,7 @@ const CadastrarInformacoes:React.FC = ()=>{
             <Field type="text" 
             id="nome"
              name="nome" 
-             className={styles.input}
+             className={`${styles.input} ${touched.nome && errors.nome && styles.error}`}
              />
               <ErrorMessage name="nome" component="div" className={styles.errorMessage}/>
           </fieldset>
@@ -73,7 +73,7 @@ const CadastrarInformacoes:React.FC = ()=>{
             <Field type="text" 
             id="cargo"
              name="cargo" 
-             className={styles.input}
+             className={`${styles.input} ${touched.cargo && errors.cargo && styles.error}`}
              />
               <ErrorMessage name="cargo" component="div" className={styles.errorMessage}/>
           </fieldset>
@@ -83,7 +83,7 @@ const CadastrarInformacoes:React.FC = ()=>{
             <Field as="textarea" 
             id="resumo"
              name="resumo" 
-             className={styles.textarea}
+             className={`${styles.textarea} ${touched.resumo && errors.resumo && styles.error}`}
              />
               <ErrorMessage name="resumo" component="div" className={styles.errorMessage}/>
           </fieldset>  
@@ -92,7 +92,7 @@ const CadastrarInformacoes:React.FC = ()=>{
 
         </Form>
 
-        )};
+        )}
       </Formik>
 
     </div>
