@@ -3,9 +3,10 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Layout from './components/layout'
-import Home from './pages/home/Home'
+import Home from './pages/home'
 import CadastrarPortifolio from './pages/portifolio/CadastrarPortifolio'
 import ListagemPortifolios from './pages/portifolio/ListagemPortifolios'
+import CadastrarInformacoes from './pages/curriculo/CadastrarInformacoes'
 
 
 
@@ -14,14 +15,13 @@ const App:React.FC = () => {
   return (
     <BrowserRouter>
       <Layout>
-        <h1>Testando Importação do Layout</h1>
-      <Routes>
-        <Route path='/' element={<Home/>}/>    
-        <Route path='/portifolio/cadastro' element={<CadastrarPortifolio/>}/>  
-        <Route path='/portifolio/listagem' element={<ListagemPortifolios/>}/>    
-      </Routes>   
-      </Layout> 
-      
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/curriculo/informacoes/cadastro' element={<CadastrarInformacoes/>}/>    
+          <Route path='/portifolio/cadastro' element={<CadastrarPortifolio/>}/>  
+          <Route path='/portifolio/listagem' element={<ListagemPortifolios/>}/>    
+        </Routes>       
+      </Layout>       
     </BrowserRouter>
        
   )

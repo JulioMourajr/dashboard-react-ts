@@ -18,18 +18,18 @@ const SideBar:React.FC = ()=>{
       <h3>Currículo</h3>
       <ul>
         <li>
-          <NavLink to="/curriculo/cadastro/resumo" className={styles.active}>
-            Cadastrar Resumo
+          <NavLink to="/curriculo/informacoes/cadastro" className={styles.active}>
+            Cadastrar Informações
           </NavLink>
         </li>
         <li>
-          <NavLink to="/curriculo/cadastro/experiencia-academica" className={styles.active}>
-            Cadastrar Experiencia Academica
+          <NavLink to="/curriculo/experiencia/cadastro" className={styles.active}>
+            Cadastrar Experiencia
           </NavLink>
         </li>
         <li>
-          <NavLink to="/curriculo/cadastro/experiencia-profissional" className={styles.active}>
-            Cadastrar Experiencia Profissional
+          <NavLink to="/curriculo/experiencia/lista" className={styles.active}>
+            Lista de Experiencias
           </NavLink>
         </li>
       </ul>
