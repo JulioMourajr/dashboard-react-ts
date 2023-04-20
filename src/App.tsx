@@ -7,6 +7,8 @@ import Home from './pages/home'
 import CadastrarPortifolio from './pages/portifolio/CadastrarPortifolio'
 import ListagemPortifolios from './pages/portifolio/ListagemPortifolios'
 import CadastrarInformacoes from './pages/curriculo/CadastrarInformacoes'
+import CadastrarExperiencia from './pages/curriculo/CadastrarExperiencia'
+
 
 
 
@@ -17,7 +19,8 @@ const App:React.FC = () => {
       <Layout>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/curriculo/informacoes/cadastro' element={<CadastrarInformacoes/>}/>    
+          <Route path='/curriculo/informacoes/cadastro' element={<CadastrarInformacoes/>}/> 
+          <Route path='/curriculo/experiencia/cadastro' element={<CadastrarExperiencia/>}/>    
           <Route path='/portifolio/cadastro' element={<CadastrarPortifolio/>}/>  
           <Route path='/portifolio/listagem' element={<ListagemPortifolios/>}/>    
         </Routes>       

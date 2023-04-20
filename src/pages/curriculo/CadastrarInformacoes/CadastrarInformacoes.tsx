@@ -2,8 +2,8 @@ import React from "react";
 import * as Yup from 'yup';
 import styles from "./CadastrarInformacoes.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import Input from "../../../components/forms/Input/Input";
-import Textarea from "../../../components/forms/Textarea/Textarea";
+import Input from "../../../components/forms/Input";
+import Textarea from "../../../components/forms/Textarea";
 
 
 interface FormValues {
@@ -41,13 +41,11 @@ const CadastrarInformacoes:React.FC = ()=>{
   return(
     <div className={styles.formWrapper}>
       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit} >
-        {({errors, touched}) =>(
-
-        
+        {({errors, touched}) =>(       
 
         <Form className={styles.form}>
 
-          <h2 className={styles.title}> Cadastrar Informações Pessoais</h2>
+          <h2 className={styles.title}> Cadastrar Informações</h2>
 
           <Input 
             label="Foto"
