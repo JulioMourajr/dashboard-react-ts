@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Layout from './components/layout'
 import Home from './pages/home'
-import CadastrarPortifolio from './pages/portifolio/CadastrarPortifolio'
-import ListagemPortifolios from './pages/portifolio/ListagemPortifolios'
+import CadastrarPortifolio from './pages/portifolio/CadastrarPortifolio/CadastrarPortifolio'
+import ListagemPortifolios from './pages/portifolio/ListagemPortifolio'
 import CadastrarInformacoes from './pages/curriculo/CadastrarInformacoes'
 import CadastrarExperiencia from './pages/curriculo/CadastrarExperiencia'
 
