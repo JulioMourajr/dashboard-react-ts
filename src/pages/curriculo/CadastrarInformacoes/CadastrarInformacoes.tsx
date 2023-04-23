@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useEffect, useState}from "react";
 import * as Yup from 'yup';
 import styles from "./CadastrarInformacoes.module.css";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import Input from "../../../components/forms/Input";
 import Textarea from "../../../components/forms/Textarea";
-import { Informacoes, createInformacoes } from "../../../services/informacoesService";
+import { Informacoes, createInformacoes, getInformacoes } from "../../../services/informacoesService";
+import InformacoesCard from "../InformacoesCard/InformacoesCard";
 
 const CadastrarInformacoes:React.FC = ()=>{
+
+  const [informacoes, setInformacoes] = useState<Informacoes>({} as Informacoes)
 
   const initialValues : Informacoes = {
     id: 1,
@@ -25,14 +28,29 @@ const CadastrarInformacoes:React.FC = ()=>{
 
   });
 
+  const fetchInformacao = async ()=>{
+    try {
+      const informacao = await getInformacoes();
+      setInformacoes(informacao)
+    } catch (error) {
+      console.error('Erro ao buscar informacoes:', error)      
+    }
+  } 
+
+  useEffect(()=>{
+    fetchInformacao()
+  }, [])
+
+
   const onSubmit = async(values:Informacoes, {resetForm} : {resetForm: ()=> void})=>{
     try {
       await createInformacoes(values);
+      setInformacoes(values);
       console.log(values);
-      resetForm();
+      //resetForm();
       alert('Formulario Enviado!')
     } catch (error) {
-      console.error('Erro ao enviar o formulario', error);
+      console.error('Erro ao enviar o formulario:', error);
       alert('Ocorreu um erro ao enviar o formulario. Tente novamente.')
     }
     
@@ -81,6 +99,8 @@ const CadastrarInformacoes:React.FC = ()=>{
 
         )}
       </Formik>
+
+      <InformacoesCard informacoes={informacoes} />
 
     </div>
   )
