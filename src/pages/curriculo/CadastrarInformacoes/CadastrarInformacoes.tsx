@@ -4,18 +4,12 @@ import styles from "./CadastrarInformacoes.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import Input from "../../../components/forms/Input";
 import Textarea from "../../../components/forms/Textarea";
-
-
-interface FormValues {
-  foto:string;
-  nome:string;
-  cargo:string;
-  resumo:string;
-}
+import { Informacoes, createInformacoes } from "../../../services/informacoesService";
 
 const CadastrarInformacoes:React.FC = ()=>{
 
-  const initialValues : FormValues = {
+  const initialValues : Informacoes = {
+    id: 1,
     foto: '',
     nome: '',
     cargo: '',
@@ -31,11 +25,17 @@ const CadastrarInformacoes:React.FC = ()=>{
 
   });
 
-  const onSubmit = (values:FormValues, {resetForm} : {resetForm: ()=> void})=>{
-    // Logica de Envio para o backend
-    console.log(values);
-    resetForm();
-    alert('Formulario Enviado!')
+  const onSubmit = async(values:Informacoes, {resetForm} : {resetForm: ()=> void})=>{
+    try {
+      await createInformacoes(values);
+      console.log(values);
+      resetForm();
+      alert('Formulario Enviado!')
+    } catch (error) {
+      console.error('Erro ao enviar o formulario', error);
+      alert('Ocorreu um erro ao enviar o formulario. Tente novamente.')
+    }
+    
   }
   
   return(
