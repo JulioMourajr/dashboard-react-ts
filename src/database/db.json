@@ -1,13 +1,13 @@
 {
-    "informacoes":[
-        {
-            "id":1,
-            "foto": "",
-            "nome": "",
-            "cargo": "",
-            "resumo":""
-        }
-    ],
-    "experiencias":[],
-    "portifolios": []
+  "informacoes": [
+    {
+      "id": 1,
+      "foto": "https://github.com/JulioMourajr.png",
+      "nome": "Julio Moura",
+      "cargo": "Dev Front end",
+      "resumo": " I’m currently working at TV GAZETA DE ALAGOAS.\n I’m currently learning HTML, CSS E JavaScript.\n I’m looking for help with JavaScript."
+    }
+  ],
+  "experiencias": [],
+  "portifolios": []
 }

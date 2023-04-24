@@ -47,7 +47,7 @@ const CadastrarInformacoes:React.FC = ()=>{
       await createInformacoes(values);
       setInformacoes(values);
       console.log(values);
-      //resetForm();
+      resetForm();
       alert('Formulario Enviado!')
     } catch (error) {
       console.error('Erro ao enviar o formulario:', error);
