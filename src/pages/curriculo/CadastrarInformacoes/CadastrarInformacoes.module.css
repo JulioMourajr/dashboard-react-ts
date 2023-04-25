@@ -13,6 +13,12 @@
   margin: 50px; 
 }
 
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .title{
   font-size: 24px;
   font-weight: bold;
@@ -37,3 +43,14 @@
 .button:hover{
   background-color: #005fa3;
 }
+
+.deleteButton{
+  background-color: #ff3333;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.deleteButton:hover{
+  background-color: #cc3333;
+}
+
