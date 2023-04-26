@@ -10,14 +10,6 @@
   ],
   "experiencias": [
     {
-      "id": 1,
-      "titulo": "Técnico em Eletrônica no IFAL.",
-      "descricao": "",
-      "tipo": "academico",
-      "anoInicio": "2009",
-      "anoFim": "2013"
-    },
-    {
       "id": 2,
       "titulo": "Sistemas de Informação",
       "descricao": "",
@@ -32,22 +24,6 @@
       "tipo": "profissional",
       "anoInicio": "2012",
       "anoFim": "2037"
-    },
-    {
-      "id": 4,
-      "titulo": "Dev no comeia",
-      "descricao": "",
-      "tipo": "profissional",
-      "anoInicio": "2023",
-      "anoFim": "2025"
-    },
-    {
-      "id": 5,
-      "titulo": "Dev no comeia Labs",
-      "descricao": "",
-      "tipo": "profissional",
-      "anoInicio": "2023",
-      "anoFim": "2024"
     },
     {
       "id": 6,
