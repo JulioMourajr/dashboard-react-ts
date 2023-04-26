@@ -7,18 +7,12 @@ import Input from "../../../components/forms/Input";
 import Textarea from "../../../components/forms/Textarea";
 import Select from "../../../components/forms/Select/Select";
 
-interface FormValues {
-  titulo: string;
-  descricao: string;
-  tipo: string;
-  anoInicio:string;
-  anoFim:string;
-}
-
+import { Experiencia, createExperiencia } from "../../../services/experienciaService";
 
 const CadastrarExperiencia:React.FC = ()=>{
 
-  const initialValues:FormValues = {
+  const initialValues:Experiencia = {
+    id: 0,
     titulo:"",
     descricao:"",
     tipo:"",
@@ -29,19 +23,24 @@ const CadastrarExperiencia:React.FC = ()=>{
   const validationSchema = Yup.object().shape({
 
     titulo: Yup.string().required("Campo obrigatório"),
-    descricao: Yup.string().required("Campo obrigatório"),
+    descricao: Yup.string(),
     tipo: Yup.string().required("Campo obrigatório"),
     anoInicio: Yup.number().required("Campo obrigatório").typeError('Um numero é obrigatorio'),
     anoFim:  Yup.number().required("Campo obrigatório").typeError('Um numero é obrigatorio'),
 
   });
 
-  const onSubmit = (values:FormValues,{resetForm}:{resetForm:()=> void })=>{
-    // logica de envio Para o backend
-
-    console.log(values)
-    resetForm();
-    alert("Formulario enviado com suceeso!")
+  const onSubmit = async (values:Experiencia,{resetForm}:{resetForm:()=> void })=>{
+    try {
+      await createExperiencia(values)
+      console.log(values)
+      resetForm();
+      alert("Formulario enviado com sucesso!")
+      
+    } catch (error) {
+      console.log(error)
+      alert("Ocorreu um erro ao enviar o Formulario")
+    }    
   };
 
   return (

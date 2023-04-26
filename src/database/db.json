@@ -8,6 +8,23 @@
       "resumo": "Possui conhecimentos em HTML, CSS, JavaScript, React, Angular e está se aventurando no banck-end com spring-JAVA."
     }
   ],
-  "experiencias": [],
+  "experiencias": [
+    {
+      "id": 1,
+      "titulo": "Técnico em Eletrônica no IFAL.",
+      "descricao": "",
+      "tipo": "academico",
+      "anoInicio": "2009",
+      "anoFim": "2013"
+    },
+    {
+      "id": 2,
+      "titulo": "Sistemas de Informação",
+      "descricao": "",
+      "tipo": "academico",
+      "anoInicio": "2023",
+      "anoFim": "2023"
+    }
+  ],
   "portifolios": []
 }
