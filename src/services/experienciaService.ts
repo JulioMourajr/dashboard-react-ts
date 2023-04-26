@@ -14,7 +14,7 @@ export const createExperiencia = async (experiencia:Experiencia) =>{
   return response.data
 }
 
-export const getExperiencia = async (experiencia:Experiencia) =>{
+export const getExperiencias = async () =>{
   const response = await api.get('/experiencias');
   return response.data
 }
@@ -32,4 +32,12 @@ export const updateExperiencia = async (experiencia:Experiencia) =>{
 export const deleteExperiencia = async (id:number)=>{
   const response = await api.delete(`/experiencias/${id}`)
   return response.data
+}
+
+export const createOrUpdateExperiencia = async (experiencia:Experiencia)=>{
+  if(experiencia.id === 0){
+    return await createExperiencia(experiencia);
+  }else{
+    return await updateExperiencia(experiencia);
+  }
 }

@@ -1,40 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from './ListagemExperiencias.module.css'
+import {getExperiencias, Experiencia} from '../../../services/experienciaService'
+import { useNavigate } from "react-router-dom";
 
-interface Experiencia{
+/*interface Experiencia{
   titulo: string;
   descricao: string;
   tipo: string;
   anoInicio: string;
   anoFim: string;
-}
+}*/
 
 const ListagemExperiencias: React.FC = () => {
-  const [experiencias, setExperiencias] = React.useState<Experiencia[]>([
-    {
-      titulo: 'Estagio em Desenvolvimento de Softawere',
-      descricao: 'Desenvolvimento de apps com React, Node JS e Typescript',
-      tipo: 'profissional',
-      anoInicio: '2020',
-      anoFim: '2022'
-    },
-    {
-      titulo: 'Estagio TV Gazeta',
-      descricao: 'Parte tecnica da TV',
-      tipo: 'profissional',
-      anoInicio: '2012',
-      anoFim: '2013'
-    },
+
+  const navigate = useNavigate()
+
+  const [experiencias, setExperiencias] = React.useState<Experiencia[]>([   
   ]);
+
+  const fetchExperiencias = async()=>{
+    try {
+      const experiencias = await getExperiencias();
+      setExperiencias(experiencias);
+
+    } catch (error) {
+      console.log('Erro ao buscar experiências!', error);     
+    }
+  }
+
+  useEffect(()=>{
+    fetchExperiencias();
+  }, [])
+    
+  const handleEdit = (experiencia: Experiencia) => {
+    navigate('/curriculo/experiencia/cadastro', {state:experiencia})
+  }
 
   const handleDelete = (index: number) => {
     setExperiencias(experiencias.filter((_, i) => i !== index));
   }
 
-  const handleEdit = (experiencia: Experiencia) => {
-    // logica para editar
-  }
+
 
   return (
     <table className={styles.table}>

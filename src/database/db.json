@@ -24,6 +24,38 @@
       "tipo": "academico",
       "anoInicio": "2023",
       "anoFim": "2023"
+    },
+    {
+      "id": 3,
+      "titulo": "Tecnico de sistemas Audiovisuais - TV GAZETA",
+      "descricao": "",
+      "tipo": "profissional",
+      "anoInicio": "2012",
+      "anoFim": "2037"
+    },
+    {
+      "id": 4,
+      "titulo": "Dev no comeia",
+      "descricao": "",
+      "tipo": "profissional",
+      "anoInicio": "2023",
+      "anoFim": "2025"
+    },
+    {
+      "id": 5,
+      "titulo": "Dev no comeia Labs",
+      "descricao": "",
+      "tipo": "profissional",
+      "anoInicio": "2023",
+      "anoFim": "2024"
+    },
+    {
+      "id": 6,
+      "titulo": "teste 2",
+      "descricao": "",
+      "tipo": "academico",
+      "anoInicio": "2012",
+      "anoFim": "2025"
     }
   ],
   "portifolios": []
