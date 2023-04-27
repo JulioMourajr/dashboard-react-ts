@@ -46,6 +46,14 @@ const SideBar:React.FC = ()=>{
             </NavLink>
           </li>
       </ul>
+
+      <ul>
+        <li>
+          <NavLink to="/login" className={styles.active}>
+            <h3>Logout</h3>
+          </NavLink>
+        </li>
+      </ul>
       </nav>
     </div>
   )

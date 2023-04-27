@@ -29,10 +29,11 @@ const validationSchema = Yup.object().shape({
 
 
 const Login = () => {
+  const navigate = useNavigate();
 
   const onSubmit = async(values:LoginValues)=>{
     try {
-      // logica de login
+      navigate("/");
       console.log(values)
     } catch (error) {
       console.log(error)     
