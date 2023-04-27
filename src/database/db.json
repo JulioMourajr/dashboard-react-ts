@@ -4,8 +4,8 @@
       "id": 1,
       "foto": "https://github.com/JulioMourajr.png",
       "nome": "Julio Moura",
-      "cargo": "Dev Front end",
-      "resumo": "Possui conhecimentos em HTML, CSS, JavaScript, React, Angular e está se aventurando no banck-end com spring-JAVA."
+      "cargo": "Desenvolvedor Front end",
+      "resumo": "Possui conhecimentos em HTML, CSS, JavaScript, React, Angular e está aprendendo back-end com spring-JAVA."
     }
   ],
   "experiencias": [
@@ -26,13 +26,24 @@
       "anoFim": "2037"
     },
     {
-      "id": 6,
-      "titulo": "teste 2",
+      "id": 7,
+      "titulo": "Dev comeia Labs Front end",
       "descricao": "",
-      "tipo": "academico",
-      "anoInicio": "2012",
-      "anoFim": "2025"
+      "tipo": "profissional",
+      "anoInicio": "2023",
+      "anoFim": "2027"
     }
   ],
-  "portifolios": []
+  "portifolio": [
+    {"id":1,
+      "link":"https://github.com/JulioMourajr/Casimiroflix",
+      "imagem":"https://picsum.photos/200/300?random=1",
+      "titulo":"Casimiroflix"
+    },
+    { "id":2,
+      "link":"https://github.com/JulioMourajr/cracha-nlw",
+      "imagem": "https://picsum.photos/200/300?random=2",
+      "titulo":"Crachá Digital"
+    }
+  ]
 }
