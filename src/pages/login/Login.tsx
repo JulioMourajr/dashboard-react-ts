@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useNavigate } from 'react-router-dom';
-import { Formik, Form } from "formik";
+//import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
 import styles from './Login.module.css'
@@ -9,6 +9,7 @@ import styles from './Login.module.css'
 import Input from '../../components/forms/Input/Input';
 import { login as loginService } from '../../services/authService';
 import { useAuth } from '../../contexts/AuthContexts';
+import Form from '../../components/forms/Form';
 
 interface LoginValues{
   email: string;
@@ -48,7 +49,7 @@ const Login = () => {
 
   return (
     <div className={styles.loginWrapper}> 
-        <div className={styles.formWrapper}>
+        {/*<div className={styles.formWrapper}>
           <Formik 
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -83,6 +84,40 @@ const Login = () => {
           </Formik>
 
         </div>
+
+        */}
+
+        <Form 
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={onSubmit}              
+        >
+          {({errors, touched})=> (
+              <>
+                <h1 className={styles.title}>Meu Site Pessoal</h1>
+                <Input
+                  label='Email'
+                  name='email'
+                  type='email'
+                  errors={errors.email}
+                  touched={touched.email}                
+                />
+
+                <Input
+                  label='Password'
+                  name='password'
+                  type='password'
+                  errors={errors.password}
+                  touched={touched.password}
+                />
+
+                <button type='submit' className={styles.button}>
+                  Login
+                </button>
+              </>
+          )}
+
+        </Form>
 
     </div>
   )
