@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from '../components/layout'
 
 import Home from '../pages/home'
@@ -9,9 +9,20 @@ import ListagemPortifolios from '../pages/portifolio/ListagemPortifolio'
 import CadastrarInformacoes from '../pages/curriculo/CadastrarInformacoes'
 import CadastrarExperiencia from '../pages/curriculo/CadastrarExperiencia'
 import ListagemExperiencia from '../pages/curriculo/ListagemExperiencia'
+import { useAuth } from '../contexts/AuthContexts'
 
 
 const AppRoutes:React.FC = () => {
+
+  const {authenticated, isLoading} = useAuth();
+
+  if(isLoading){
+    return <p>Carregando...</p>
+  }
+
+  if(!authenticated){
+    return <Navigate to='/login'/>
+  }
   return (
       <Layout>
         <Routes>

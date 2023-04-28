@@ -1,10 +1,10 @@
 {
-  "usuarios":[
-  {
-    "id":1,
-    "email":"teste@gmail.com",
-    "password":"teste@123"
-  }
+  "usuarios": [
+    {
+      "id": 1,
+      "email": "teste@gmail.com",
+      "password": "teste@123"
+    }
   ],
   "informacoes": [
     {
@@ -12,7 +12,7 @@
       "foto": "https://github.com/JulioMourajr.png",
       "nome": "Julio Moura",
       "cargo": "Desenvolvedor Front end",
-      "resumo": "Possui conhecimentos em HTML, CSS, JavaScript, React, Angular e está aprendendo back-end com spring-JAVA."
+      "resumo": "Possui conhecimentos em HTML, CSS, JavaScript, React, Angular e está aprendendo back-end com JAVA, para no futuro ser um dev full stack."
     }
   ],
   "experiencias": [
@@ -42,10 +42,10 @@
     },
     {
       "id": 8,
-      "titulo": "teste 5",
+      "titulo": "teste 4",
       "descricao": "",
-      "tipo": "academico",
-      "anoInicio": "2023",
+      "tipo": "profissional",
+      "anoInicio": "2024",
       "anoFim": "2030"
     }
   ],
