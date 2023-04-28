@@ -6,7 +6,8 @@ import * as Yup from "yup";
 
 import styles from './Login.module.css'
 
-import Input from '../../components/forms/Input';
+import Input from '../../components/forms/Input/Input';
+import { login } from '../../services/authService';
 
 interface LoginValues{
   email: string;
@@ -33,10 +34,12 @@ const Login = () => {
 
   const onSubmit = async(values:LoginValues)=>{
     try {
+      await login(values.email, values.password)
       navigate("/");
       console.log(values)
     } catch (error) {
-      console.log(error)     
+      console.log(error) 
+      alert('Email ou senha invalidos')    
     }
   }
 
