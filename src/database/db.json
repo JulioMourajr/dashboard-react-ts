@@ -9,10 +9,10 @@
   "informacoes": [
     {
       "id": 1,
-      "foto": "",
-      "nome": "",
-      "cargo": "",
-      "resumo": ""
+      "foto": "https://github.com/JulioMourajr.png",
+      "nome": "Julio Moura",
+      "cargo": "Dev Front end",
+      "resumo": "Um nutricionista em transição de carreira, possui conhecimentos em HTML, CSS, JS, React, Node,SQL , Java e Spring."
     }
   ],
   "experiencias": [

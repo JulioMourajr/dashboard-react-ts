@@ -4,14 +4,6 @@ import styles from './ListagemExperiencias.module.css'
 import {getExperiencias, Experiencia, deleteExperiencia} from '../../../services/experienciaService'
 import { useNavigate } from "react-router-dom";
 
-/*interface Experiencia{
-  titulo: string;
-  descricao: string;
-  tipo: string;
-  anoInicio: string;
-  anoFim: string;
-}*/
-
 const ListagemExperiencias: React.FC = () => {
 
   const navigate = useNavigate()
@@ -47,8 +39,6 @@ const ListagemExperiencias: React.FC = () => {
       alert('Erro ao excluir Experiencia!')
     } 
   }
-
-
 
   return (
     <table className={styles.table}>
