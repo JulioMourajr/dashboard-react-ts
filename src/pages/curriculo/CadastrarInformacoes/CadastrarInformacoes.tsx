@@ -67,8 +67,6 @@ const CadastrarInformacoes:React.FC = ()=>{
       alert('Ocorreu um erro ao deletar. Tente novamente.')
     }
   }
-
-  
   
   return(
     <div className={styles.formWrapper}>
@@ -127,9 +125,7 @@ const CadastrarInformacoes:React.FC = ()=>{
 
           <Button  onClick={handleDelete} red>Deletar</Button>
         </div>    
-    )}
-        
-      
+    )} 
 
     </div>
   )
