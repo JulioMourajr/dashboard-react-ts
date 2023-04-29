@@ -10,6 +10,8 @@ import Input from '../../components/forms/Input/Input';
 import { login as loginService } from '../../services/authService';
 import { useAuth } from '../../contexts/AuthContexts';
 import Form from '../../components/forms/Form';
+import Button from '../../components/common/Button';
+import Title from '../../components/common/Title';
 
 interface LoginValues{
   email: string;
@@ -49,44 +51,7 @@ const Login = () => {
 
   return (
     <div className={styles.loginWrapper}> 
-        {/*<div className={styles.formWrapper}>
-          <Formik 
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={onSubmit}          
-          >
-            {({errors, touched})=>(
-              <Form className={styles.form}>
-                <h1 className={styles.title}>Meu Site Pessoal</h1>
-                <Input
-                  label='Email'
-                  name='email'
-                  type='email'
-                  errors={errors.email}
-                  touched={touched.email}                
-                />
-
-                <Input
-                  label='Password'
-                  name='password'
-                  type='password'
-                  errors={errors.password}
-                  touched={touched.password}                
-                />
-
-                <button type='submit' className={styles.button}>
-                  Login
-                </button>
-
-              </Form>
-            )}
-            
-          </Formik>
-
-        </div>
-
-        */}
-
+    
         <Form 
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -94,7 +59,7 @@ const Login = () => {
         >
           {({errors, touched})=> (
               <>
-                <h1 className={styles.title}>Meu Site Pessoal</h1>
+                <Title>Meu Site Pessoal</Title>
                 <Input
                   label='Email'
                   name='email'
@@ -111,9 +76,7 @@ const Login = () => {
                   touched={touched.password}
                 />
 
-                <button type='submit' className={styles.button}>
-                  Login
-                </button>
+                <Button type='submit'>Login</Button>
               </>
           )}
 

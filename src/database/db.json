@@ -9,10 +9,10 @@
   "informacoes": [
     {
       "id": 1,
-      "foto": "https://github.com/JulioMourajr.png",
-      "nome": "Julio Moura",
-      "cargo": "Desenvolvedor Front end",
-      "resumo": "Possui conhecimentos em HTML, CSS, JavaScript, React, Angular e está aprendendo back-end com JAVA, para no futuro ser um dev full stack."
+      "foto": "",
+      "nome": "",
+      "cargo": "",
+      "resumo": ""
     }
   ],
   "experiencias": [
